@@ -1,0 +1,1051 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1875,19683" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.microsoft.com/workflow/2012/07/xaml/activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:uas="clr-namespace:UiPath.Activities.System;assembly=UiPath.System.Activities" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="100">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core.Activities.TextModifications</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Microsoft.PowerShell</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Activities.System</x:String>
+      <x:String>Microsoft.Activities.Expressions</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Update SAA Tableau Extract - Latest Luminate Reports" sap:VirtualizedContainerService.HintSize="1885,19618" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="GMPW" />
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="SAAgmail" />
+      <Variable x:TypeArguments="sd:DataTable" Name="TransRptDT" />
+      <Variable x:TypeArguments="x:String" Name="TransTableStr" />
+      <Variable x:TypeArguments="x:String" Name="StrReportUrl" />
+      <Variable x:TypeArguments="x:String" Name="ReportType" />
+      <Variable x:TypeArguments="sd:DataTable" Name="RegRptDT" />
+      <Variable x:TypeArguments="x:String" Name="RegTableStr" />
+      <Variable x:TypeArguments="sd:DataTable" Name="SortTransRptDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="SortRegRptDT" />
+      <Variable x:TypeArguments="x:String" Name="SortRegTableStr" />
+      <Variable x:TypeArguments="x:String" Name="SortTransTableStr" />
+      <Variable x:TypeArguments="x:String" Default="Current Year Registrations Multiple Events - Report" Name="CurrentYrRegFileName" />
+      <Variable x:TypeArguments="x:String" Default="Current Year Transactions Multiple Events - Report" Name="CurrentYrTransFileName" />
+      <Variable x:TypeArguments="x:String" Name="NewRegFileName" />
+      <Variable x:TypeArguments="x:String" Name="NewTransFileName" />
+      <Variable x:TypeArguments="x:String" Name="StrReportNum" />
+      <Variable x:TypeArguments="x:String" Name="ProjectName" />
+      <Variable x:TypeArguments="x:String" Name="MSGFileName" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="1843,2302" sap2010:WorkflowViewState.IdRef="Sequence_13">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="JSONfile" />
+        <Variable x:TypeArguments="njl:JObject" Name="JSONobj" />
+        <Variable x:TypeArguments="x:String" Name="RunDateTime" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Email Auth" sap:VirtualizedContainerService.HintSize="478,428" sap2010:WorkflowViewState.IdRef="Sequence_14">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:Comment DisplayName="PW for Gmail - saa.kjshine" sap:VirtualizedContainerService.HintSize="384,74" sap2010:WorkflowViewState.IdRef="Comment_3" Text="Get PW for Email Parsing opf Trans and Reg Report&#xA;" />
+        <uas:GetUsernamePasswordX AutosubmitTimeoutSeconds="10" Credential="[Saved.Values(Of PasswordCredentials)(&quot;Credential from Get Username/Password&quot;)]" CredentialName="UiPath: Gmail - App PW " DisplayName="Get Username/Password" sap:VirtualizedContainerService.HintSize="384,122" sap2010:WorkflowViewState.IdRef="GetUsernamePasswordX_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uas:GetUsernamePasswordX>
+        <Assign DisplayName="Assign" sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_25">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[GMPW]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[Saved.Values(Of PasswordCredentials)("Credential from Get Username/Password").Password]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+      <Sequence DisplayName="Initialize Data Tables for Report Files" sap:VirtualizedContainerService.HintSize="478,250" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:BuildDataTable DataTable="[TransRptDT]" DisplayName="Build TransRptDT Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Email_x0020_Subject&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;From&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Body&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Report_x0020_URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Report_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Download_x0020_Report_x0020_URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Report_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+        <ui:BuildDataTable DataTable="[RegRptDT]" DisplayName="Build RegRptDT Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Email_x0020_Subject&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;From&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Body&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Report_x0020_URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Report_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Download_x0020_Report_x0020_URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Report_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+      </Sequence>
+      <Assign sap:VirtualizedContainerService.HintSize="478,60" sap2010:WorkflowViewState.IdRef="Assign_24">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[RunDateTime]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Now.ToString(“MM-dd-yyyy-hh-mm”)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Sequence DisplayName="Read JSON File to Get Project Name for the Log Runtime File" sap:VirtualizedContainerService.HintSize="478,1352" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:Comment sap:VirtualizedContainerService.HintSize="436,228" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Use this to get the Project Name&#xA;&#xA;Will use for Output of Messages to File for Logging of Steps throughout the Process, allowing Job to tun unattended&#xA;&#xA;Good discussion on JSON Deserialization with UiPath&#xA;&#xA;https://aneejian.com/deserialize-json-uipath/&#xA;&#xA;" />
+        <ui:ReadTextFile Content="[JSONfile]" DisplayName="Read Text File" FileName="c:\Users\saakj\OneDrive\UiPath\SAA Tableau Daily Extract\project.json" sap:VirtualizedContainerService.HintSize="436,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,229" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+          <ui:CommentOut.Body>
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[JSONfile]" />
+            </Sequence>
+          </ui:CommentOut.Body>
+        </ui:CommentOut>
+        <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[JSONobj]" JsonString="[JSONfile]" />
+        <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[ProjectName]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[JSONobj("name").ToString]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_23">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[MSGFileName]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">["C:\Users\saakj\OneDrive\UiPath Runtime Log Files\" + ProjectName + " v(" + RunDateTime + ").TXT"]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:WriteTextFile DisplayName="Open and Write to Log Message File" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="436,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[&quot;Runtime Output for Project : &quot; + ProjectName + Environment.NewLine +&#xA;MSGFileName + Environment.NewLine]" />
+        <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="436,132" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[&quot;Date and Time of run : &quot; + Now.ToString(“MM/dd/yyyy  - hh:mm”) + Environment.NewLine]" UseDefaultEncoding="False" />
+      </Sequence>
+    </Sequence>
+    <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="saa.kjshine@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="1843,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="SAA Trans and Reg Reports" MarkAsRead="False" Messages="[SAAgmail]" OnlyUnreadMessages="False" Password="[GMPW]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="4" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1843,61" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="Entering Email Parse  - Authorized Access saa.kjshine@gmail.com" />
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1843,3823" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[SAAgmail]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="snm:MailMessage">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="email" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Parse GMAIL" sap:VirtualizedContainerService.HintSize="1807,3689" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="StrEmailSubject" />
+              <Variable x:TypeArguments="x:String" Name="StrEmailBody" />
+              <Variable x:TypeArguments="x:String" Name="StrEmailDate" />
+              <Variable x:TypeArguments="x:String" Name="StrEmailFrom" />
+              <Variable x:TypeArguments="x:String" Name="StrDownloadUrl" />
+              <Variable x:TypeArguments="x:String" Name="emaildatetime" />
+              <Variable x:TypeArguments="x:String" Default="(([1-9] |[123]0 |[012][1-9]|31 )([a-z]{3}) (19[0-9]{2}|2[0-9]{3}))" Name="RegexDate" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="1765,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[StrEmailSubject]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[email.subject]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="1765,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[ReportType]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Regex.Match(StrEmailSubject,"(?&lt;=^Report Current Year )(.*)(?= Multiple Events - Report is complete$)").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="1765,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[StrEmailBody]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[email.Body]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="1765,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[StrEmailDate]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[email.Date]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="1765,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[emaildatetime]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Regex.Match(StrEmailDate,"(([1-9] )|([123]0 )|([012][1-9] )|(31 ))([A-Za-z]{3}) (19[0-9]{2}|2[0-9]{3})").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="1765,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[StrEmailFrom]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[email.From.ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1765,302" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,224" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[&quot;*** Before Email Parse - Email Information ***&quot; + Environment.NewLine +&#xA;email.From.ToString + Environment.NewLine +&#xA;email.Subject.ToString + Environment.NewLine + &#xA;email.Date.ToString + Environment.NewLine +&#xA;email.Body.ToString + Environment.NewLine +&#xA;&quot;Email Date Reformat: &quot;+ emaildatetime + Environment.NewLine +&#xA;&quot;Report Type: &quot; + ReportType + Environment.NewLine]" UseDefaultEncoding="False" />
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <Sequence DisplayName="Extract Text Between Labels" sap:VirtualizedContainerService.HintSize="1765,2483" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="inputString" />
+                <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="matchValue" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Comment sap:VirtualizedContainerService.HintSize="1723,536" sap2010:WorkflowViewState.IdRef="Comment_1" Text="This is a example of how to extract a text between two strings  using a regular expression patern&#xA;&#xA;Use https://regexr.com/&#xA;&#xA;to formulate the Correct Regular Expression&#xA;&#xA;Place that Text in the Patter...Between Quotes&#xA;&#xA;This looks for the URL of the Trans or Reg Report in the email Body&#xA;&#xA;Regex Expression Used&#xA;&#xA;&quot;(?&lt;=To view the results, go here: \s*\r*\n*)(.*?)(?=$)&quot;&#xA;&#xA;If Found, it will insert into the apppropriate data table&#xA;&#xA;if not, Log &quot;No Match Found&quot; and goto the next email&#xA;&#xA;Read more about regular expressions here:&#xA;http://msdn.microsoft.com/en-us/library/az24scfc%28v=vs.110%29.aspx&#xA;" />
+              <Assign sap:VirtualizedContainerService.HintSize="1723,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[inputString]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[StrEmailBody]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:Matches BuilderPattern="To view the results, go here: Report Status: Completed" DisplayName="Matches - Extract Report URL text between two labels" sap:VirtualizedContainerService.HintSize="1723,59" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[inputString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;To view the results, go here: &quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null},{&quot;Index&quot;:1,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;Report Status: Completed&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=To view the results, go here: \s*\r*\n*)(.*?)(?=\s)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[matchValue]" />
+              <If Condition="[(matchValue is Nothing) Or (matchvalue.Count = 0)]" DisplayName="If no match was found" sap:VirtualizedContainerService.HintSize="1723,1616" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence DisplayName="No Report URL Found" sap:VirtualizedContainerService.HintSize="376,325" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="No Report URL match was found" />
+                    <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="No Report URL match was found in Email Body" UseDefaultEncoding="False" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Match - Found Report URL String" sap:VirtualizedContainerService.HintSize="1302,1468" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="ReportNum" />
+                      <Variable x:TypeArguments="x:String" Default="https://secure3.convio.net/saa/admin/ReportWriterManager?rptwrt.manager=download_result_csv&amp;mfc_pref=T&amp;action=download_csv&amp;report_result_id=" Name="DownloadRptBegin" />
+                      <Variable x:TypeArguments="x:String" Default="&amp;mfc_popup=t" Name="DownloadRptEnd" />
+                      <Variable x:TypeArguments="x:String" Default="(?&lt;=rr=)(.*)(?=$)" Name="RegexStrReportNum" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="1260,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[StrReportURL]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[matchValue(0).Value]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="1260,61" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[StrReportURL]" />
+                    <ui:Matches DisplayName="Matches - Find ReportNum" sap:VirtualizedContainerService.HintSize="1260,59" sap2010:WorkflowViewState.IdRef="Matches_4" Input="[StrReportUrl]" IsBuilderTabModified="False" Pattern="[RegexStrReportNum]" RegexOption="IgnoreCase, Multiline" Result="[ReportNum]" />
+                    <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="1260,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot; ReportNum: &quot; + ReportNum(0).Value]" />
+                    <If Condition="[(ReportNum is Nothing) Or (ReportNum.Count = 0)]" sap:VirtualizedContainerService.HintSize="1260,975" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,325" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="No ReportNum match was found" />
+                          <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_4" Text="No Report Number match was found in Email Body" UseDefaultEncoding="False" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Report Num Found" sap:VirtualizedContainerService.HintSize="839,827" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[StrReportNum]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[ReportNum(0).value]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[StrDownloadUrl]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[DownloadRptBegin + StrReportNum + DownloadRptEnd]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <If Condition="[ReportType =&quot;Registrations&quot;]" sap:VirtualizedContainerService.HintSize="797,535" sap2010:WorkflowViewState.IdRef="If_5">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,387" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{[StrEmailSubject],&#xA;[StrEmailFrom],&#xA;[StrEmailDate],&#xA;[StrEmailBody],&#xA;[StrReportURL],&#xA;[StrReportNum],&#xA;[StrDownloadURL],&#xA;[ReportType]}]" DataTable="[RegRptDT]" DisplayName="Add RegRptDT Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                                <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;RegTable Entry: &quot; + StrReportUrl]" />
+                                <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_5" Text="[&quot;RegTable Entry: &quot; + StrReportUrl]" UseDefaultEncoding="False" />
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,387" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{[StrEmailSubject],&#xA;[StrEmailFrom],&#xA;[StrEmailDate],&#xA;[StrEmailBody],&#xA;[StrReportURL],&#xA;[StrReportNum],&#xA;[StrDownloadURL],&#xA;[ReportType]}]" DataTable="[TransRptDT]" DisplayName="Add TransRptDT Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;TransTable Entry: &quot; + StrReportUrl]" />
+                                <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_6" Text="[&quot;TransTable Entry: &quot; + StrReportUrl]" UseDefaultEncoding="False" />
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+            <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="1765,132" sap2010:WorkflowViewState.IdRef="AppendLine_7" Text="[&quot;After Parse : &quot; + Environment.NewLine +&#xA;&quot;Email Subject : &quot; + StrEmailSubject + Environment.NewLine + &#xA;&quot;Email Date : &quot; + StrEmailDate + Environment.NewLine + &#xA;&quot;Email Sender : &quot; + StrEmailFrom + Environment.NewLine + &#xA;&quot;Report Url : &quot; +StrReportUrl + Environment.NewLine + &#xA;&quot;Report Download URL : &quot; + StrDownloadUrl + Environment.NewLine + &#xA;&quot;Email Body : &quot;+ StrEmailBody + Environment.NewLine]" UseDefaultEncoding="False" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+    <Sequence DisplayName="Output and Sort Data Tables by Report Number" sap:VirtualizedContainerService.HintSize="1843,1129" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:Comment sap:VirtualizedContainerService.HintSize="436,151" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Sort the Trans and Reg Tables by Report Number - Descending&#xA;&#xA;Top report will be the latest report available, Use to download from Convio/Blackbaud system and store in local file system" />
+      <ui:OutputDataTable DataTable="[TransRptDT]" DisplayName="Output TransRptDT Data Table" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[TransTableStr]" />
+      <ui:OutputDataTable DataTable="[RegRptDT]" DisplayName="Output RegRptDT Data Table" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[RegTableStr]" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,302" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,224" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AppendLine DisplayName="Append Line- Data Tables Before Sort" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_8" Text="[&quot;*****Transaction Table Output*****&quot; + Environment.NewLine + TransTableStr + Environment.NewLine +&#xA;&quot;*****Registration Table Output*****&quot; + Environment.NewLine + RegTableStr + Environment.NewLine]" UseDefaultEncoding="False" />
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Report Number" DataTable="[TransRptDT]" DisplayName="Sort Trans Data Table" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Decending" OutputDataTable="[SortTransRptDT]" SortOrder="Descending" />
+      <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Report Number" DataTable="[RegRptDT]" DisplayName="Sort Reg Data Table" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="SortDataTable_2" Order="Decending" OutputDataTable="[SortRegRptDT]" SortOrder="Descending" />
+      <ui:OutputDataTable DataTable="[SortTransRptDT]" DisplayName="Output TransRptDT Data Table" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[SortTransTableStr]" />
+      <ui:OutputDataTable DataTable="[SortRegRptDT]" DisplayName="Output RegRptDT Data Table" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_4" Text="[SortRegTableStr]" />
+      <ui:AppendLine DisplayName="Append Line - Datatables AFTER SORT" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="436,132" sap2010:WorkflowViewState.IdRef="AppendLine_9" Text="[&quot;*****SORTED Transaction Table Output*****&quot; + Environment.NewLine + SortTransTableStr + Environment.NewLine +&#xA;&quot;*****SORTED Registration Table Output*****&quot; + Environment.NewLine + SortRegTableStr + Environment.NewLine]" UseDefaultEncoding="False" />
+    </Sequence>
+    <Sequence DisplayName="Download Current Trans and Reg ReportsSequence" sap:VirtualizedContainerService.HintSize="1843,424" sap2010:WorkflowViewState.IdRef="Sequence_12">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[NewRegFileName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[CurrentYrRegFileName+" " +SortRegRptDT.Rows(0).Item("Report Number").ToString + ".csv"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[NewTransFileName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[CurrentYrTransFileName+" " + SortTransRptDT.Rows(0).Item("Report Number").ToString + ".csv"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_10" Text="[&quot; *** Final File Names To Be Processed ***&quot; +environment.NewLine +&#xA;&quot;New Reg File Name :&quot; + NewRegFileName + Environment.NewLine +&#xA;&quot;New Trans File Name :&quot; + NewTransFileName + Environment.NewLine]" UseDefaultEncoding="False" />
+    </Sequence>
+    <ueab:SequenceX DisplayName="Access Luminate and Download Reports" sap:VirtualizedContainerService.HintSize="1843,10857" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+      <ueab:SequenceX.Variables>
+        <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+        <Variable x:TypeArguments="x:String" Default="C:\Users\saakj\OneDrive\Swim Across America\Tableau Reports\" Name="TableauFilePath" />
+        <Variable x:TypeArguments="x:String" Default="C:\Users\saakj\Downloads\" Name="DownloadsFilePath" />
+        <Variable x:TypeArguments="x:Boolean" Name="TransReportDownloadSuccessful" />
+        <Variable x:TypeArguments="x:Boolean" Name="TransDownloadFileExists" />
+        <Variable x:TypeArguments="x:Boolean" Name="RegReportDownloadSuccessful" />
+        <Variable x:TypeArguments="x:Boolean" Name="RegDownloadFileExists" />
+      </ueab:SequenceX.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="1334,10765" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1300,10549" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Default="C:\Swim Across America\Tableau Reports\" Name="LocalBackupDirectory" />
+                <Variable x:TypeArguments="x:String" Default="C:\Users\saakj\Google Drive\Swim Across America\Tableau Reports\" Name="LocalGoogleDriveSyncDirectory" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uas:GetUsernamePasswordX AutosubmitTimeoutSeconds="10" Credential="[Saved.Values(Of PasswordCredentials)(&quot;Credential from Get Username/Password&quot;)]" CredentialName="UiPath: Luminate Admin for Reports" DisplayName="Get Username/Password" sap:VirtualizedContainerService.HintSize="1258,122" sap2010:WorkflowViewState.IdRef="GetUsernamePasswordX_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uas:GetUsernamePasswordX>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Name:'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1258,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" Text="[Saved.Values(Of PasswordCredentials)(&quot;Credential from Get Username/Password&quot;).Username]">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://secure3.convio.net/saa/admin/AdminLogin" DesignTimeRectangle="760, 170, 212, 30" ElementType="InputBox" FriendlyName="'INPUT  USERNAME_1610767…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='User Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANgAAAAiCAYAAAA9KReSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACHSURBVHhe7dOxDcAgAMCw/v8ix9AN0aULZLOlnJBnAhmDQWgNNsaQdKHdZzDgjMEgZDAIGQxCBoOQwSBkMAgZDEIGg5DBIGQwCBkMQgaDkMEgZDAIGQxCBoOQwSBkMAgZDEIGg5DBIGQwCBkMQgaDkMEgZDAIGQxCv4NJOm+3BgPuMxhk5nwBjTKKOBKigtAAAAAASUVORK5CYII=" InformativeScreenshot="a80a4ed2c66fa06fa33e6e8987df561c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Administrator Login - Swim Across America' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="760, 153, 72, 18" ElementType="Text" FriendlyName="'User Name:'" FullSelectorArgument="&lt;webctrl aaname='User Name:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='User Name:' tag='LABEL' type='' check:text='User Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAWCAYAAABqgnq6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGUSURBVFhH7ZTtjYMwDEBvnTt1raibQKcpq+Q/G5Qh0jjkw3YwYHQ69SQ/KRLFIbYfpl/BUGHClJgwJSZMiQlTYsKUmDAlTZh/hG83hVf+WZHu/zaQ5+cenkv+XVim4P4i/0k+Sphz9z7Xfxfmx1uchLbc1EaCxPBZICPuK3H8TAXtIXEm7DVFqSUHOwtig/dhQPHBs7rGeAMh1bzmeQS6WysMrlnCQkqAnieNw3OxoE1RhXo2NIw+TT5hy4KuYwzt7Zrs8q4yQSKwVzOPFXTCWIGNJTxdKySBG5XOxlRh+RrnFJ+FvEwYfqGpXjolIGWt86BmgQv/YWuirTdXR7uuXCyWIcH21LfNm4B9JAcVRqZ4V9hBzQJNmGR3p9k2wvRNd1wQtjYUz/SoriQLN9RP2HlhBzULNGF5ckjC/BbI2CJwgdI3n7gkLAL3YlNEWDdtV4Xt1yzFkDCgfW5lEVmpQBRnB6YkOF4EbMngCHugwZaH1Rf3+/G6MECq+aQw4wgTpsSEKanC5nm2dWIRYcYxJkxFCG9fxW9l3BK8MwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="User Name:" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password:'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1258,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" Text="[Saved.Values(Of PasswordCredentials)(&quot;Credential from Get Username/Password&quot;).Password]">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://secure3.convio.net/saa/admin/AdminLogin" DesignTimeRectangle="760, 229, 212, 30" ElementType="InputBoxPassword" FriendlyName="'INPUT  Password_1610767…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='Password:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANgAAAAiCAYAAAA9KReSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACHSURBVHhe7dOxDcAgAMCw/v8ix9AN0aULZLOlnJBnAhmDQWgNNsaQdKHdZzDgjMEgZDAIGQxCBoOQwSBkMAgZDEIGg5DBIGQwCBkMQgaDkMEgZDAIGQxCBoOQwSBkMAgZDEIGg5DBIGQwCBkMQgaDkMEgZDAIGQxCv4NJOm+3BgPuMxhk5nwBjTKKOBKigtAAAAAASUVORK5CYII=" InformativeScreenshot="ce7b597e49cba656ef2a87c8303d916e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Administrator Login - Swim Across America' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="760, 212, 62, 18" ElementType="Text" FriendlyName="'Password:'" FullSelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' type='' check:text='Password:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEIAAAAWCAYAAAB0S0oJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGqSURBVFhH7ZTbrYMwDIa7TquzFuompdOUVXhnAxjCxzdiO5iK6pyXivxSJJI4vnxxuEATq4FQNRCqBkLVQKgaCNVJQCzw6u7wWnSayEAsA3S3H7i60Q1vTn6VPgXRDTDrFGCEB8J4jDr9av0JBMA83OHaK4m6Y7ztppueiJE3MAG/LmDHPgKm+cZfmcuFFB8hR/KPsUr8Na76XM/0QwCxiYc6DgKDzoWoFChPZ582nc+eV/RLhaKd82HnfBwRF+FyEtAGgMT+fS3jE20qEMWHaB+EUt57Gr7IzDGLE4hJsnwsssGz5ENiSXH8zTnU5wncuuZsi7I1gX38aaytxKM+WLUojnDbXDStZ4mLvSVHyYr/AkCBiL36oLWqS2V/zc38mLKiM7uot0/DJMV4ynttn98iKd6UAHBFcwz8LkBQhzoiKzrmmttFfQDCOxIwKYiQaJS1P03othGme1K0T/8K8ytF+ThkY88wL/B//xGV2Lm2OLc/OpcEJVnbs2LjGRw+ON929rzyGy4+Qo77N83FurhjfxTEydVAqBoIVQExTdOpRwBxZjUQLIBfbs4i5KI09dgAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Password:" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="1258,166" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://secure3.convio.net/saa/admin/AdminLogin" DesignTimeRectangle="883, 280, 83, 37" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Log In' check:text='Log In' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAApCAYAAABA4LXdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL2SURBVGhD7ZrLbtpAFIb7IHmILvMUrRr1KbrrrrtsWHdDd1GbKotI3VRsusiiyg6plZCIZFUgLnJRimMssGsT3Mgif+cMNxuG4AIToJwjfRIez7HNx3DGtuYJOLQFy9UYM3L7/T7Mlo+W6yMIuswCyBP5Im/TkZB744eoWS6evS/i6dvvOMjkmQWQp+cfijBtF5bfG5ocxFguma/fuMoDMOn42fISI3gs97odyBGrSmLScXR6JT2OYizXEbWDS8FqkD/yOIqxXCrOqgTm3yCPo2C5a4blaoTlaoTlaoTlakSj3DryoThY6OFYuf/xODYjcSER8hfq/bpguRphuRrZDrknNeSsO3iD04uIYFsO3mST/Q6/ODCCyfO654g+Br0geVjcrFwbFco3mzgxw8l5owgVo4bDqfxl2bzc7LAf+kJoBzmjjbxDMkRQ7kjwuRAim4UAs41ctQtbbIcRyV5OLig3uoNRdcbHo+sofE3mL8vG5b6u3slzNowfsfYCXpWkcdFuyO0zi7ZIUGHSLyZ8KbkIkTuP9b3w5Cj2zPqkbQU2LLeMS3pxFPl4N70va8Ggi3HbeJlpxj4n+6Wpp3Plus5UCRi2O3asbXk2LHfYRyEtkZ910BAflSOquHzNnZW4j3LP2iw3SRq5acoC/XU1lYX/W+7iCc0uleW2ckLLXqNA3vZWrvhSDaeHygw+Pn0W/VLfig3qLh1P3oqVfDSG3fZY7ryIfVnFQ0Tj2lI+RFTC5EPE2X6WhcdhIE7cr079ENvAjsgdTHxh0EnW71FJWVDXN8XOjNzRxBeKa7s0xONqyRMlglr6qBTjk+H2sDNyDzJF+ZLGG09iQnTYw+W38tpetKybHZK7e7BcjbBcjbBcjSjl8lqx1Zm7VuxXO5DrTFVJTDpolaPVUYxcuaLc9pRJTDoa89bnUtDK6HKzgxenvLI8LeTp6OMVqpYLt/tnaHIQCbkU9/f3aP2+FbUjkMWZeRjy5Ahf5G06ZuRyrC9YrrYA/gJKJUuqBlGFiQAAAABJRU5ErkJggg==" InformativeScreenshot="320abcddbef02654e69280a2906fd558.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Administrator Login - Swim Across America' /&gt;" SearchSteps="FuzzySelector, Image" Text="Log In" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='submit' /&gt;" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="1258,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="1258,132" sap2010:WorkflowViewState.IdRef="AppendLine_12" Text="[&quot; *** Log Into Luminate Online System Complete *** &quot;+ Environment.NewLine]" UseDefaultEncoding="False" />
+              <Sequence DisplayName="Run and Download REGISTRATION Report" sap:VirtualizedContainerService.HintSize="1258,4477" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Boolean" Name="ReportReady" />
+                  <Variable x:TypeArguments="x:String" Name="ImgSaveReadyState" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Generate Latest REGISTRATION Report" sap:VirtualizedContainerService.HintSize="1216,961" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="737,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[SortRegRptDT.Rows(0).Item(&quot;Report URL&quot;).ToString]" />
+                  <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="737,746" sap2010:WorkflowViewState.IdRef="RetryScope_6" NumberOfRetries="5" RetryInterval="00:01:00">
+                    <ui:RetryScope.ActivityBody>
+                      <ActivityAction>
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="695,565" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aaname" DisplayName="Get Attribute SAVE &quot;IMG&quot;" sap:VirtualizedContainerService.HintSize="653,134" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+                            <ui:GetAttribute.Result>
+                              <OutArgument x:TypeArguments="x:String">[ImgSaveReadyState]</OutArgument>
+                            </ui:GetAttribute.Result>
+                            <ui:GetAttribute.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ef41b18a-f2de-49d4-9b62-62a1ee339bf9" InformativeScreenshot="3e3a18ee3103dbbe5feceed625c35317" Selector="&lt;webctrl aaname='Save' parentid='dld_prtview_results' tag='IMG' /&gt;" WaitForReady="COMPLETE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:GetAttribute.Target>
+                          </ui:GetAttribute>
+                          <If Condition="[ImgSaveReadyState = &quot;Save&quot;]" sap:VirtualizedContainerService.HintSize="653,299" sap2010:WorkflowViewState.IdRef="If_13">
+                            <If.Then>
+                              <Sequence DisplayName="Report Ready" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_39">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[ReportReady]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Report Not Ready" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_40">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[ReportReady]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:RetryScope.ActivityBody>
+                    <ui:RetryScope.Condition>
+                      <ActivityFunc x:TypeArguments="x:Boolean">
+                        <p:IsTrue DisplayName="Is true" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="IsTrue_4" Input="[ReportReady]" />
+                      </ActivityFunc>
+                    </ui:RetryScope.Condition>
+                  </ui:RetryScope>
+                </Sequence>
+                <If Condition="[ReportReady]" sap:VirtualizedContainerService.HintSize="1216,3382" sap2010:WorkflowViewState.IdRef="If_16">
+                  <If.Then>
+                    <Sequence DisplayName="Download REGISTRATION CSV FIle" sap:VirtualizedContainerService.HintSize="867,3233" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="825,61" sap2010:WorkflowViewState.IdRef="Assign_41">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[ReportReady]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="825,132" sap2010:WorkflowViewState.IdRef="AppendLine_13" Text="[&quot; *** Generate and Download Registration File ***&quot; +environment.NewLine +&#xA;&quot;New Reg File Name :&quot; + NewRegFileName + Environment.NewLine +&#xA;&quot;Download SAVE Image Ready State : &quot; + ImgSaveReadyState + Environment.NewLine +&#xA;&quot;Report Ready (T/F) : &quot; + ReportReady.ToString+ Environment.NewLine +&#xA;&quot;Report Generated Successfully For : &quot; + SortRegRptDT.Rows(0).Item(&quot;Report URL&quot;).ToString + Environment.NewLine +&#xA;&quot;*** Start Download of Registration Report ***&quot; + Environment.NewLine]" UseDefaultEncoding="False" />
+                      <ui:PathExists DisplayName="Path Exists" Exists="[RegDownloadFileExists]" sap:VirtualizedContainerService.HintSize="825,89" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[DownloadsFilePath + NewRegFileName]" PathType="File" />
+                      <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="825,132" sap2010:WorkflowViewState.IdRef="AppendLine_19" Text="[&quot;Does Registration File Exist already? (Previous Run) &quot; + DownloadsFilePath + NewRegFileName + Environment.NewLine +&#xA;&quot;Previous Download Deleted : &quot; + RegDownloadFileExists.ToString + Environment.NewLine]" UseDefaultEncoding="False" />
+                      <If Condition="[RegDownloadFileExists = True]" DisplayName="If Download of file exists from previous run - Delete in Downloads and replace" sap:VirtualizedContainerService.HintSize="825,366" sap2010:WorkflowViewState.IdRef="If_14">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="304,217" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Delete ContinueOnError="{x:Null}" DisplayName="Delete Downloads Copy if File exists (previous run)" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Delete_3" Path="[DownloadsFilePath+NewRegFileName]" />
+                            <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_42">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[RegDownloadFileExists]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Then>
+                      </If>
+                      <uix:NGoToUrl ContinueOnError="True" DisplayName="Go To Trans Report Download JavaScript URL" sap:VirtualizedContainerService.HintSize="825,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="[SortRegRptDT.Rows(0).Item(&quot;Download Report URL&quot;).ToString]" />
+                      <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope - Check for Trans Download Successful " sap:VirtualizedContainerService.HintSize="825,635" sap2010:WorkflowViewState.IdRef="RetryScope_7" NumberOfRetries="5" RetryInterval="00:01:00">
+                        <ui:RetryScope.ActivityBody>
+                          <ActivityAction>
+                            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="376,454" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:PathExists DisplayName="Path Exists" Exists="[RegDownloadFileExists]" sap:VirtualizedContainerService.HintSize="334,89" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="[DownloadsFilePath + NewRegFileName]" PathType="File" />
+                              <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_21" Text="[&quot;Retry Scope - Reg DownLoad : &quot; + TransDownloadFileExists.ToString + &quot; @ &quot; + Now.ToString +environment.NewLine]" UseDefaultEncoding="False" />
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_27" Text="[&quot;Retry Scope Reg DownLoad : &quot; + RegDownloadFileExists.ToString]" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:RetryScope.ActivityBody>
+                        <ui:RetryScope.Condition>
+                          <ActivityFunc x:TypeArguments="x:Boolean">
+                            <p:IsTrue DisplayName="Is true" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="IsTrue_5" Input="[RegDownloadFileExists]" />
+                          </ActivityFunc>
+                        </ui:RetryScope.Condition>
+                      </ui:RetryScope>
+                      <If Condition="[RegDownloadFileExists]" sap:VirtualizedContainerService.HintSize="825,1090" sap2010:WorkflowViewState.IdRef="If_15">
+                        <If.Then>
+                          <Sequence DisplayName="Download File exists" sap:VirtualizedContainerService.HintSize="518,941" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="476,61" sap2010:WorkflowViewState.IdRef="Assign_43">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[RegReportDownloadSuccessful]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Sequence DisplayName="Copy File to Tableau Input File Location" sap:VirtualizedContainerService.HintSize="476,746" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[TableauFilePath + CurrentYrRegFileName + &quot;.csv&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[DownloadsFilePath + NewRegFileName]" />
+                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[LocalGoogleDriveSyncDirectory + CurrentYrRegFileName + &quot;.csv&quot;]" DisplayName="Copy File to Local C: Drive - Backup to Google Drive via Backup and Sync" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="[DownloadsFilePath + NewRegFileName]" />
+                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[LocalBackupDirectory + CurrentYrRegFileName + &quot;.csv&quot;]" DisplayName="Copy File to Local Backup Folder" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_5" Overwrite="True" Path="[DownloadsFilePath + NewRegFileName]" />
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="WriteLine_24" Text="[&quot;Reg File Placed in : &quot; +TableauFilePath + CurrentYrRegFileName + &quot;.csv&quot; + Environment.NewLine]" />
+                            </Sequence>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_44">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[RegReportDownloadSuccessful]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Else>
+                      </If>
+                      <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="825,132" sap2010:WorkflowViewState.IdRef="AppendLine_15" Text="[&quot;Registration Download Complete : &quot;  + RegReportDownloadSuccessful.ToString + Environment.NewLine +&#xA;&quot;Downloaded to : &quot; + DownloadsFilePath + NewRegFileName + Environment.NewLine +&#xA;&quot;Registration File Placed in : &quot; +TableauFilePath + CurrentYrRegFileName + &quot;.csv&quot; + Environment.NewLine +&#xA;Environment.NewLine]" UseDefaultEncoding="False" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="825,61" sap2010:WorkflowViewState.IdRef="WriteLine_25" Text="[&quot;Reg Report Download Successful : &quot; + RegReportDownloadSuccessful.ToString]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="304,357" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_45">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[ReportReady]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_26" Text="[&quot;Report Ready : &quot; + ReportReady.ToString + Environment.NewLine +&#xA;&quot;Report Download Failed For : &quot; + SortRegRptDT.Rows(0).Item(&quot;Report URL&quot;).ToString + Environment.NewLine]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_46">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[RegReportDownloadSuccessful]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </If.Else>
+                </If>
+              </Sequence>
+              <Sequence DisplayName="Run and Download Trans Report" sap:VirtualizedContainerService.HintSize="1258,4477" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Boolean" Name="ReportReady" />
+                  <Variable x:TypeArguments="x:String" Name="ImgSaveReadyState" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Generate Latest Trans Report" sap:VirtualizedContainerService.HintSize="1216,961" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="737,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[SortTransRptDT.Rows(0).Item(&quot;Report URL&quot;).ToString]" />
+                  <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="737,746" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="5" RetryInterval="00:01:00">
+                    <ui:RetryScope.ActivityBody>
+                      <ActivityAction>
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="695,565" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aaname" DisplayName="Get Attribute SAVE &quot;IMG&quot;" sap:VirtualizedContainerService.HintSize="653,134" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                            <ui:GetAttribute.Result>
+                              <OutArgument x:TypeArguments="x:String">[ImgSaveReadyState]</OutArgument>
+                            </ui:GetAttribute.Result>
+                            <ui:GetAttribute.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ef41b18a-f2de-49d4-9b62-62a1ee339bf9" InformativeScreenshot="3e3a18ee3103dbbe5feceed625c35317" Selector="&lt;webctrl aaname='Save' parentid='dld_prtview_results' tag='IMG' /&gt;" WaitForReady="COMPLETE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:GetAttribute.Target>
+                          </ui:GetAttribute>
+                          <If Condition="[ImgSaveReadyState = &quot;Save&quot;]" sap:VirtualizedContainerService.HintSize="653,299" sap2010:WorkflowViewState.IdRef="If_8">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[ReportReady]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_31">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[ReportReady]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:RetryScope.ActivityBody>
+                    <ui:RetryScope.Condition>
+                      <ActivityFunc x:TypeArguments="x:Boolean">
+                        <p:IsTrue DisplayName="Is true" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="IsTrue_1" Input="[ReportReady]" />
+                      </ActivityFunc>
+                    </ui:RetryScope.Condition>
+                  </ui:RetryScope>
+                </Sequence>
+                <If Condition="[ReportReady]" sap:VirtualizedContainerService.HintSize="1216,3382" sap2010:WorkflowViewState.IdRef="If_9">
+                  <If.Then>
+                    <Sequence DisplayName="Download Trans CSV FIle" sap:VirtualizedContainerService.HintSize="867,3233" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="825,61" sap2010:WorkflowViewState.IdRef="Assign_32">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[ReportReady]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="825,132" sap2010:WorkflowViewState.IdRef="AppendLine_16" Text="[&quot; *** Generate and Download Transaction File ***&quot; +environment.NewLine +&#xA;&quot;New Trans File Name :&quot; + NewTransFileName + Environment.NewLine +&#xA;&quot;Download SAVE Image Ready State : &quot; + ImgSaveReadyState + Environment.NewLine +&#xA;&quot;Report Ready (T/F) : &quot; + ReportReady.ToString+ Environment.NewLine +&#xA;&quot;Report Generated Successfully For : &quot; + SortTransRptDT.Rows(0).Item(&quot;Report URL&quot;).ToString + Environment.NewLine +&#xA;&quot;*** Start Download of Transaction Report ***&quot; + Environment.NewLine]" UseDefaultEncoding="False" />
+                      <ui:PathExists DisplayName="Path Exists" Exists="[TransDownloadFileExists]" sap:VirtualizedContainerService.HintSize="825,89" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[DownloadsFilePath + NewTransFileName]" PathType="File" />
+                      <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="825,132" sap2010:WorkflowViewState.IdRef="AppendLine_20" Text="[&quot;Does Transaction File Exist already? (Previous Run) &quot; + DownloadsFilePath + NewTransFileName + Environment.NewLine +&#xA;&quot;Previous Download Deleted : &quot; + TransDownloadFileExists.ToString + Environment.NewLine]" UseDefaultEncoding="False" />
+                      <If Condition="[TransDownloadFileExists = True]" DisplayName="If Download of file exists from previuos run - Delete in Downloads and replace" sap:VirtualizedContainerService.HintSize="825,366" sap2010:WorkflowViewState.IdRef="If_12">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="304,217" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Delete ContinueOnError="{x:Null}" DisplayName="Delete Downloads Copy if File exists (previous run)" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Delete_2" Path="[DownloadsFilePath+NewTransFileName]" />
+                            <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_38">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[TransDownloadFileExists]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Then>
+                      </If>
+                      <uix:NGoToUrl ContinueOnError="True" DisplayName="Go To Trans Report Download JavaScript URL" sap:VirtualizedContainerService.HintSize="825,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[SortTransRptDT.Rows(0).Item(&quot;Download Report URL&quot;).ToString]" />
+                      <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope - Check for Trans Download Successful " sap:VirtualizedContainerService.HintSize="825,635" sap2010:WorkflowViewState.IdRef="RetryScope_5" NumberOfRetries="5" RetryInterval="00:01:00">
+                        <ui:RetryScope.ActivityBody>
+                          <ActivityAction>
+                            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="376,454" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:PathExists DisplayName="Path Exists" Exists="[TransDownloadFileExists]" sap:VirtualizedContainerService.HintSize="334,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[DownloadsFilePath + NewTransFileName]" PathType="File" />
+                              <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_22" Text="[&quot;Retry Scope - Trans DownLoad : &quot; + TransDownloadFileExists.ToString + &quot; @ &quot; + Now.ToString +environment.NewLine]" UseDefaultEncoding="False" />
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_28" Text="[&quot;Retry Scope Trans DownLoad : &quot; + TransDownloadFileExists.ToString]" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:RetryScope.ActivityBody>
+                        <ui:RetryScope.Condition>
+                          <ActivityFunc x:TypeArguments="x:Boolean">
+                            <p:IsTrue DisplayName="Is true" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="IsTrue_3" Input="[TransDownloadFileExists]" />
+                          </ActivityFunc>
+                        </ui:RetryScope.Condition>
+                      </ui:RetryScope>
+                      <If Condition="[TransDownloadFileExists]" sap:VirtualizedContainerService.HintSize="825,1090" sap2010:WorkflowViewState.IdRef="If_11">
+                        <If.Then>
+                          <Sequence DisplayName="Download File exists" sap:VirtualizedContainerService.HintSize="518,941" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="476,61" sap2010:WorkflowViewState.IdRef="Assign_36">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[TransReportDownloadSuccessful]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Sequence DisplayName="Copy Trans file to Appropriate Folders" sap:VirtualizedContainerService.HintSize="476,746" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[TableauFilePath + CurrentYrTransFileName + &quot;.csv&quot;]" DisplayName="Copy File From Downloads to Tableau Pre Builder Folder" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[DownloadsFilePath + NewTransFileName]" />
+                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[LocalGoogleDriveSyncDirectory + CurrentYrTransFileName + &quot;.csv&quot;]" DisplayName="Copy File to Local C: Drive - Backup to Google Drive via Backup and Sync" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_4" Overwrite="True" Path="[DownloadsFilePath + NewRegFileName]" />
+                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[LocalBackupDirectory + CurrentYrTransFileName + &quot;.csv&quot;]" DisplayName="Copy File to Local Backup Folder" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_6" Overwrite="True" Path="[DownloadsFilePath + NewRegFileName]" />
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="[&quot;Trans File Placed in : &quot; +TableauFilePath + CurrentYrRegFileName + &quot;.csv&quot; + Environment.NewLine]" />
+                            </Sequence>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_37">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[TransReportDownloadSuccessful]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Else>
+                      </If>
+                      <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="825,132" sap2010:WorkflowViewState.IdRef="AppendLine_18" Text="[&quot;Transaction Download Complete : &quot;  + TransReportDownloadSuccessful.ToString + Environment.NewLine +&#xA;&quot;Downloaded to : &quot; + DownloadsFilePath + NewTransFileName + Environment.NewLine +&#xA;&quot;Transaction File Placed in : &quot; +TableauFilePath + CurrentYrTransFileName + &quot;.csv&quot; + Environment.NewLine +&#xA;Environment.NewLine+&#xA;&quot;*** Registration and Transaction File Generation and Download Complete ***&quot; +environment.NewLine]" UseDefaultEncoding="False" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="825,61" sap2010:WorkflowViewState.IdRef="WriteLine_20" Text="[&quot;Trans Report Download Successful : &quot; + TransReportDownloadSuccessful.ToString]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="304,357" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_34">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[ReportReady]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[&quot;Report Ready : &quot; + ReportReady.ToString + Environment.NewLine +&#xA;&quot;Report Download Failed For : &quot; + SortTransRptDT.Rows(0).Item(&quot;Report URL&quot;).ToString + Environment.NewLine]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_35">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[TransReportDownloadSuccessful]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </If.Else>
+                </If>
+              </Sequence>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="1258,166" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://secure3.convio.net/saa/admin/AdminHomePage" DesignTimeRectangle="1840, 115, 41, 15" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='HeaderLinks' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='HeaderLinks' tag='A' type='' check:text='Log Out' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAATCAYAAAAEaoRHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEQSURBVEhL7ZQ7DoMwDIZ7kN6Ny3RG4gSZGTkDUgULAyNDJm4Au+sECHbCq6XQRmL4BvIwX/4Ybk3Tgm9c0mdxSZ+F/9IyySBIarbgO9QQR0+4PwYyiOXUum2cIN0Js7qyhGCTOO4VJUhrfJt0XpCUCkjNnJ0gIip3rz2GjO9SNfgBUtE9p2K67rq0ToWIEgm+voIwclNZDELXmZeeq7kujcX5GBbqD+GltN0eYT6sIZCboYzvsqXp86fSC+2h5yaEON3BWF3rQ1S9aw7M5mhAI460aXxNv0GJ2mManvT8r2xlnRbt5zDZ2LQH+RhJOEz6PexrRZxWOoYd0u7VqVT+XBphbcOv8Ej2Sf8ID6VbeAEqyVUHaJK4JQAAAABJRU5ErkJggg==" InformativeScreenshot="b256aa664c761087be990bfee493cf07.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Administrator Home Page - Swim Across America' /&gt;" SearchSteps="FuzzySelector, Image" Text="Log Out" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="1258,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" />
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXpSURBVFhH1ZZvVFNlHMdvvvJlKoiYpmm9qHd1ynMGg93BgE02/rPJAJkYZacXmXVK046cOscwQ8FMqyVjgJZGLTXziHlESZDBIFOTjbGNbTQHnQyGHhPw1/PcPZc9u2xi9qZ+53zOHZd7n8/3+T33uRvzvymorJzjLJCzriLVXpda2ebSZNpdGlXAoVYGXIWKfvS/C4hap0oqwdeS2/59OXXsXHdJzrsubdbwQG4aTJMjC5KdwmHPkoJdFcRZkOFHobbie8kwD1euYpUWzdg7kJ8BHHnpQWaESA0LYFeyCAk48tI8zmxWQ4Z78AKAR1wludUO9WpwFCgQ8lAAYReQfEYXSAB7ZjJCgu5L24nHJMPfv/CFA0U5Jk5eiOWKoDxaB2YLsDqIIzvt6wcK8YtavrsPDc7JSYCwDtABsJwKESYXBOhXiMGZK6simshVv0GVfwndeDVXBrb89HB51CWgZh9xCUIBMI5McSHRhddyg25uVk3Z0Gm5GLrRANez0MBIGDXA9MzJAyiU0x1QJAUDyBNhQCVxR9wdTx15ZdvKQy/BpleV0KZIhstoQCvqhFBsRzi3bwbvsWYY7rUEblg7A15z82178xs3r9eIblg/Fvms+0Q++75E3+CBhCGPXuT16kUef53YM2JMdP/RkOAeMYq3E22wKqFyzpNfbhhecagCVu0vg0ZFAnSi1NdQF+xYTujXqcF37gyMjo6C1T0GpyxB8Gd8bsTWAl6TEoaaE8BnSoSb34vh1plkuHMuGSbPI9oQF5Ng6qLUD8hJ9Kj9hyskTzRVAI9ucy6cTE8EC9pCfXgp8MzXqeGm1wP93lF4sykAqo/Gp1HuGodNDQGweUbhz989MN6WD/faU2CqIwXuXUoBMKcCdKGjBR050OduVkz0DLPyq5drljWuh+VNL3I8bVgPNXkS+DFDBJdVLNjQevtbz0I/EqhrQ2I6QCYir2acCzHmPYsk6QA9mDSCLAgf4OeMaqJnmBWHKy7gADSqHRo4LhNBW4YYbNvf4lqMZ55VHS7HYszqD4O8jjqBr71zbYsgAAmB5Zhe2TmiZ5jHG8v7hQEw28rT4bRsFbiPf8OtMy3Gs+ZnTgdQ7ByHPnTt+OC34fLp9pMO9KRaiZ5hljWtD0QKkFhbDCbZC+Azd3AP22xyPsDJrjEYG2oPD0C3nwuQEiB61AEUAHUBaJY2rOOo2JQJQ53tcKp77L5iHnnEAIL155COET3DLG0qt/HCJeTI84y+DK6cCC7BbDPH4AB9g2gJXKbwANNiQk9KaAmWNpafx2IaOtD7De9xDxbearSUFvPyjUbyEP66lZo1PXOMFP2PDT2EqAN7HjPqICr1ZVMdzis+vMXy9oQH4ENgec5utA3do3DdYRmGngxBgLD2w5SF3UX0DBNfX5YslC42lnHwn587uhEGR37j9jneavSs+ZljufOGF4bMpZPRxEFY9B6QhV5E+FW82KjzxyMRDx+APvfskdfghK2DazHeavhhw+A1x+eOXf0Jak9UoJmjdZ8h5wOwMNUteBXjijfq3sGSRfVrOWgxfz6uvhRQt6C0pRqMV85Aq7OXo+FyC5SYqmDJXg3cNsuRRCjm5XwA9m2iDRX+Oo43rvXwAbAMI/ybZyEh1lACCw9oIXbvGjD9kE2te6QASN7FusGpi/xjNba+RC0U0YRJyTHGUAwxn2jg+c80MNmjEEhDYp7JLraA6CLXorq1VbyIBstoMc8CvRZi9mugt1WJBMJ1D7UdM2GW7iCa6IV/OMbVaY/SEhpuxoQFdQh9EWgb0devRfiy4eXBAHfN0iP/6JdxnKH0g9i6cCENJ0fM/1QD/na69bRYCve60cy7pTseWE7XfIO2MPag1s3LOGGddpp5B4ug6lguEvFtp+Vo1p0S96xrPlvh3bHgi+ItMXqtH0vpEHF6DdzqUkyEi6Uw0Snx/3WJ3Rz1aX+Ywi+refo1STEGbXXMwaLWRz/XWL9ryfbc7WQDaH2td81sK2p19YQlNWnGS+a/WwzzN8pWpGcXa7w4AAAAAElFTkSuQmCC" InformativeScreenshot="97e1e2eab4e862de32b00a9803451c1b.png" Selector="&lt;html app='chrome.exe' url='https://secure3.convio.net/saa/admin/AdminLogin' /&gt;" Url="https://secure3.convio.net/saa/admin/AdminLogin" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </ueab:SequenceX>
+    <Sequence DisplayName="Run Tableau Prep Builder Command Line" sap:VirtualizedContainerService.HintSize="1843,179" sap2010:WorkflowViewState.IdRef="Sequence_53">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Users\saakj\OneDrive\Swim Across America\Prep Builder Command Line Files\Tableau_CMDLINE_SAA Trans and Reg Published Extract.bat" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+    </Sequence>
+    <Sequence DisplayName="The End" sap:VirtualizedContainerService.HintSize="1843,409" sap2010:WorkflowViewState.IdRef="Sequence_24">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:AppendLine DisplayName="Append Line" FileName="[MSGFileName]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_11" Text="[&quot;*** The End ***&quot; + Environment.NewLine +&#xA;&quot;Date and Time - End of Robot Automation : &quot; + Now.ToString(“MM/dd/yyyy  - hh:mm”) + Environment.NewLine]" UseDefaultEncoding="False" />
+      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Log File Attached: &quot; +environment.NewLine]" DisplayName="Send SMTP Mail Message" Email="saa.kjshine@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Name="SAA Report Automation" Password="[GMPW]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="SAA Tableau Data Extract Update Complete" To="kjshine62@gmail.com;saa.amy.krakauer@gmail.com">
+        <ui:SendMail.Files>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+            <InArgument x:TypeArguments="x:String">[MSGFileName]</InArgument>
+          </scg:List>
+        </ui:SendMail.Files>
+      </ui:SendMail>
+    </Sequence>
+  </Sequence>
+</Activity>
